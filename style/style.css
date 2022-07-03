@@ -299,7 +299,7 @@ Home
 ***************************/
 .home-section{
     background: var(--home-bg);
-    height: 100vh;
+    height: auto;
 }
 .home-section .container{
     padding-top:3rem;
