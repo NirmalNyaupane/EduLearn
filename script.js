@@ -63,25 +63,6 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
-
-  // Annimate Count Number
-const countNum = document.querySelectorAll(".count-number")
-const speed = 100;
-
-countNum.forEach((curElem) =>{
-  const updateNum = () =>{
-     const targetNum = parseInt(curElem.dataset.num);
-     const initialNum = parseInt(curElem.innerText);
-     const incrementNum = Math.trunc(targetNum/speed);
-
-     if(initialNum < targetNum){
-       curElem.innerText = `${initialNum + incrementNum}+`;
-       setTimeout(updateNum, 10);
-     }
-  };
-  updateNum();
-})
-
  // Scroll To Top Button
  const homesection = document.querySelector(".home-section")  
  const footerElem = document.querySelector(".footer")  
@@ -110,3 +91,33 @@ const observer = new IntersectionObserver(
   }
   );
    observer.observe(sectionHome);
+
+    // Annimate Count Number
+    const workSection = document.querySelector(".section-work-data");
+
+    const workSectionObserve = (entries) => {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        console.log(entries);   
+const countNum = document.querySelectorAll(".count-number")
+const speed = 100;
+countNum.forEach((curElem) =>{
+  const updateNum = () =>{
+     const targetNum = parseInt(curElem.dataset.num);
+     const initialNum = parseInt(curElem.innerText);
+     const incrementNum = Math.trunc(targetNum/speed);
+
+     if(initialNum < targetNum){
+       curElem.innerText = `${initialNum + incrementNum}+`;
+       setTimeout(updateNum, 10);
+     }
+  };
+  updateNum();
+})
+  };
+const workSecObserver = new IntersectionObserver(workSectionObserve, {
+  root: null,
+  threshold: 0,
+});
+
+workSecObserver.observe(workSection);
