@@ -116,7 +116,14 @@ Header
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s linear;
+    z-index: 999;
 }
  .logo{
     display: flex;
@@ -171,19 +178,6 @@ Header
 #menu-btn{
     display: none;
 }
-.sticky .header{
-    position: fixed;
-    top: 0;
-    left: 0; 
-    height: 8rem;
-    width: 100%;
-    background-color: var(--home-bg);
-    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    padding-top: 0;
-    padding-bottom: 0;
-    transition: all 0.3s linear;
-  }
 .search-form{
 position: absolute;
 top: 13%;
@@ -250,7 +244,7 @@ z-index: 22;
     top: 14%;
     right: -110%;
     width: 90%;
-    height: 70vh;
+    height: auto;
     background: var(--white);
     padding: 2rem;
     border-radius: 0.5rem;
@@ -981,7 +975,7 @@ footer
     position: fixed;
     bottom: 4%;
     right: 2%;
-    z-index: 99;
+    z-index: 999;
 }
 .scroll-top{
     width: 4rem;

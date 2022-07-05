@@ -30,7 +30,7 @@ window.onscroll = () =>{
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+    navbar.classList.remove('active');  
 }
 
 // Top rated Btn Filter 
@@ -72,27 +72,11 @@ var swiper = new Swiper(".mySwiper", {
  const scrollTop = () =>{
     homesection.scrollIntoView({behavior: "smooth"});
  };
- scroollElement  .addEventListener("click", scrollTop)
-
-// sticky navbar
-const sectionHome = document.querySelector(".home-section");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    const ent = entries[0];
-    !ent.isIntersecting ?
-    document.body.classList.add("sticky") :
-    document.body.classList.remove("sticky");
-  }, {
-    // viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-100px",
-  }
-  );
-   observer.observe(sectionHome);
-
-    // Annimate Count Number
+ scroollElement.addEventListener("click", scrollTop)
+  
+ 
+ 
+ // Annimate Count Number
     const workSection = document.querySelector(".section-work-data");
 
     const workSectionObserve = (entries) => {
