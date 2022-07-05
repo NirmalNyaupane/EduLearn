@@ -12,6 +12,9 @@
         font-size: 56.25%;
         overflow-x: hidden;
     }    
+    .header{
+        overflow-x: hidden;
+    }
     .home-pic{
         max-height: 87%;
     }
