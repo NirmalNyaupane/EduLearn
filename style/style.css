@@ -179,7 +179,7 @@ Header
     display: none;
 }
 .search-form{
-position: absolute;
+position: fixed;
 top: 13%;
 right: -110%;
 width: 50rem;
@@ -225,7 +225,7 @@ z-index: 22;
        color:var(--btn-bg) ;
 }
 .shopping-cart{
-    position: absolute;
+    position: fixed;
     top: 12%;
     right: -110%;
     background: #fff;
@@ -240,7 +240,7 @@ z-index: 22;
         transition: .2s linear;
     }
 .login-form{
-    position: absolute;
+    position: fixed;
     top: 14%;
     right: -110%;
     width: 90%;
