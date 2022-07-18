@@ -219,7 +219,7 @@ z-index: 22;
         padding-right: 1.5rem;
         color:var(--heading);
         cursor: pointer;
-        transition: all 0.5s linear;
+        transition: all 0.2s linear;
     }
 .search-form label:hover{
        color:var(--btn-bg) ;
